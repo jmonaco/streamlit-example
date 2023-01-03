@@ -23,6 +23,40 @@ def run_query(query):
 sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-st.write(f"rows[0]: {rows[0]}")
-
 df = pd.DataFrame(rows[1:], columns=rows[0])
+
+st.markdown('## st.dataframe')
+st.dataframe(df)
+
+st.markdown('## st.line_chart')
+st.line_chart(df)
+
+st.markdown('## st.area_chart')
+st.area_chart(df)
+
+st.markdown('## st.bar_chart')
+st.bar_chart(df)
+
+st.markdown('## st.altair_chart')
+st.altair_chart(df)
+
+st.markdown('## st.vega_lite_chart')
+st.vega_lite_chart(df)
+
+st.markdown('## st.plotly_chart')
+st.plotly_chart(df)
+
+st.markdown('## st.bokeh_chart')
+st.bokeh_chart(df)
+
+st.markdown('## st.pydeck_chart')
+st.pydeck_chart(df)
+
+st.markdown('## st.deck_gl_chart')
+st.deck_gl_chart(df)
+
+st.markdown('## st.graphviz_chart')
+st.graphviz_chart(df)
+
+st.markdown('## st.map')
+st.map(df)
