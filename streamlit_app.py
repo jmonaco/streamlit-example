@@ -44,7 +44,7 @@ c = alt.Chart(df).mark_bar().encode(
     y='Cost',
     color='Service Type'
 )
-st.altair_chart(c)
+st.altair_chart(c, use_container_width=True)
 
 # st.markdown('## st.vega_lite_chart')
 # st.vega_lite_chart(df)
