@@ -23,15 +23,13 @@ def run_query(query):
 sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT * FROM "{sheet_url}"')
 
-st.write(f"rows.keys(): {rows.keys()}")
+df = pd.DataFrame(rows, columns=['Service Date', 'Service Type', 'Cost'])
 
-# df = pd.DataFrame(rows, columns=['Service Date', 'Service Type', 'Cost'])
+st.markdown('## st.dataframe')
+st.dataframe(df)
 
-# st.markdown('## st.dataframe')
-# st.dataframe(df)
-
-# st.markdown('## st.line_chart')
-# st.line_chart(df, x="Service Date", y="Cost")
+st.markdown('## st.line_chart')
+st.line_chart(df, x="Service Date", y="Cost")
 
 # st.markdown('## st.area_chart')
 # st.area_chart(df)
