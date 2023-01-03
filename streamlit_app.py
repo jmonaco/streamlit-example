@@ -28,3 +28,4 @@ st.write(f"type(rows): {type(rows)}")
 # Print results.
 for row in rows:
     st.write(f"row: {row}")
+    st.write(f"type(row): {type(row)}")
