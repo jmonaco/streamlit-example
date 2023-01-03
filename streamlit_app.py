@@ -4,4 +4,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-st.text('Fixed width text')
+st.title('This is my first app!')
+st.header('This is a header')
+st.markdown('Streamlit is **_really_ cool**.')
+
