@@ -1,3 +1,4 @@
+import altair as alt
 import pandas as pd
 import streamlit as st
 from google.oauth2 import service_account
@@ -37,8 +38,13 @@ st.area_chart(df, x="Service Date", y="Cost")
 st.markdown('## st.bar_chart')
 st.bar_chart(df, x="Service Date", y="Cost")
 
-# st.markdown('## st.altair_chart')
-# st.altair_chart(df)
+st.markdown('## st.altair_chart')
+c = alt.Chart(source).mark_bar().encode(
+    x='Service Date',
+    y='Cost',
+    color='Service Type'
+)
+st.altair_chart(c)
 
 # st.markdown('## st.vega_lite_chart')
 # st.vega_lite_chart(df)
