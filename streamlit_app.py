@@ -39,7 +39,7 @@ st.markdown('## st.bar_chart')
 st.bar_chart(df, x="Service Date", y="Cost")
 
 st.markdown('## st.altair_chart')
-c = alt.Chart(source).mark_bar().encode(
+c = alt.Chart(df).mark_bar().encode(
     x='Service Date',
     y='Cost',
     color='Service Type'
