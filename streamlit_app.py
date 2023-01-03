@@ -23,6 +23,8 @@ def run_query(query):
 sheet_url = st.secrets["private_gsheets_url"]
 rows = run_query(f'SELECT COUNT(*) FROM "{sheet_url}"')
 
+st.write(f"type(rows): {type(rows)}")
+
 # Print results.
 for row in rows:
     st.write(f"row: {row}")
