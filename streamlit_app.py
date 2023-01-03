@@ -31,11 +31,11 @@ st.dataframe(df)
 st.markdown('## st.line_chart')
 st.line_chart(df, x="Service Date", y="Cost")
 
-# st.markdown('## st.area_chart')
-# st.area_chart(df)
+st.markdown('## st.area_chart')
+st.area_chart(df, x="Service Date", y="Cost")
 
-# st.markdown('## st.bar_chart')
-# st.bar_chart(df)
+st.markdown('## st.bar_chart')
+st.bar_chart(df, x="Service Date", y="Cost")
 
 # st.markdown('## st.altair_chart')
 # st.altair_chart(df)
